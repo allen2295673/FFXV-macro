@@ -2,15 +2,111 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>第二個頁面</title>
+    <title>第二個頁面 - 巨集指令</title>
+    <style>
+        .code-block {
+            position: relative;
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            max-width: 500px;
+            margin-bottom: 20px; /* 區塊之間的間距 */
+            font-family: Consolas, Monaco, 'Courier New', monospace;
+        }
+
+        .copy-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            color: #57606a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .copy-icon:hover {
+            background-color: #eaeeef;
+            color: #24292f;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #24292f;
+        }
+    </style>
 </head>
 <body>
-    <h1>這是第二個頁面</h1>
-    <p>成功跳轉過來了！</p>
-    
-    <!-- 也可以加一個連結連回第一個頁面 -->
-    <p>
-        <a href="index.html">返回第一個頁面</a>
-    </p>
+
+    <h1>FFXIV 巨集指令</h1>
+
+    <!-- 第一段巨集 -->
+    <h3>巨集 1</h3>
+    <div class="code-block">
+        <div class="copy-icon" onclick="copyCode('macro1')" title="複製程式碼">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" fill="currentColor">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+                <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+        </div>
+
+        <pre><code id="macro1">/ac 堅信 <wait.3>
+/ac 工匠的絕技 <wait.3>
+/ac 崇敬 <wait.2>
+/ac 坯料制作 <wait.3>
+/ac 坯料制作 <wait.3>
+/ac 坯料制作 <wait.3>
+/ac 精密制作 <wait.3>
+/ac 巧奪天工 <wait.3>
+/ac 改革 <wait.2>
+/ac 儉約加工 <wait.3>
+/ac 加工 <wait.3>
+/ac 中級加工 <wait.3>
+/ac 上級加工 <wait.3>
+/ac 改革 <wait.2>
+/e 宏#1 已完成！ <se.1></code></pre>
+    </div>
+
+    <!-- 第二段巨集 -->
+    <h3>巨集 2</h3>
+    <div class="code-block">
+        <div class="copy-icon" onclick="copyCode('macro2')" title="複製程式碼">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" fill="currentColor">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+                <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+        </div>
+
+        <pre><code id="macro2">/ac 加工 <wait.3>
+/ac 中級加工 <wait.3>
+/ac 上級加工 <wait.3>
+/ac 巧奪天工 <wait.3>
+/ac 改革 <wait.2>
+/ac 加工 <wait.3>
+/ac 中級加工 <wait.3>
+/ac 上級加工 <wait.3>
+/ac 改革 <wait.2>
+/ac 加工 <wait.3>
+/ac 中級加工 <wait.3>
+/ac 闊步 <wait.2></code></pre>
+    </div>
+
+    <br>
+    <p><a href="index.html">返回第一個頁面</a></p>
+
+    <script>
+        function copyCode(elementId) {
+            var codeText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(codeText);
+        }
+    </script>
+
 </body>
 </html>
