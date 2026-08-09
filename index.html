@@ -2,31 +2,877 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>生產巨集</title>
+    <title>月球探索生產巨集</title>
     <style>
-        /* 簡單加個清單樣式，看起來更整齊 */
-        ul {
-            line-height: 2;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 15px 0;
         }
         a {
             color: #0066cc;
-            text-decoration: none;
-            font-size: 18px;
+            font-weight: bold;
         }
-        a:hover {
-            text-decoration: underline;
+		/* 摺疊選單樣式 */
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 10px 15px;
+            background-color: #fafafa;
+        }
+
+        /* 標題 (帶小三角形的地方) */
+        summary {
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer; /* 滑鼠移上去變手型 */
+            user-select: none; /* 防止點擊時選取到文字 */
+            outline: none;
+            color: #222;
+        }
+
+        summary:hover {
+            color: #0066cc;
+        }
+
+        /* 表格樣式 */
+        .stat-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0 15px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .stat-table th, .stat-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+
+        .stat-table th {
+            background-color: #f5f5f5;
+            font-weight: normal;
+            color: #333;
+        }
+
+        ul.macro-list {
+            list-style-type: none;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+
+        ul.macro-list > li {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- 這是一行 HTML 註解：這裡放網頁的主標題 -->
     <h1>月球探索生產巨集</h1>
-    
-    <!-- 使用 <ul> 列表來放置多個頁面的跳轉連結 -->
-    <ul>
-        <li><a href="page2.html">跳轉到第二個頁面（例如：70級巨集）</a></li>
-        <li><a href="page3.html">跳轉到第三個頁面（例如：80級巨集）</a></li>
-        <li><a href="page4.html">跳轉到第四個頁面（例如：90級巨集）</a></li>
-    </ul>
+
+    <!-- 內文範例 1：一般文字段落 -->
+    <p>此頁面適用版本為7.2版之前，裝備分數最低為5386/5169/628</p>
+
+    <!-- 內文範例 2：提醒事項盒 (搭配上面的 CSS 樣式) -->
+    <div class="note">
+        <strong>⚠️ 使用注意事項：</strong>
+        <p>1. 請根據進展、品質與耐久進行查找</p>
+        <p>2. 建議全程食用高品質犎牛牛排與高品質模降藥液進行製作</p>
+		<p>3. 高難度配方請自行發揮，筆者僅能提供建議思路</p>
+    </div>
+	<hr> <!-- 分隔線 -->
+<!-- 可收合的 D組 (預設展開加上 open 屬性，若預設關閉則把 open 拿掉) -->
+    <details> <!-- D階任務 -->
+        <summary>D階任務</summary>
+        
+        <ul class="macro-list">
+            <li> <!-- D-1 -->
+                <a href="月球探索/探索任務/D-1.html">D-1</a> 
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4026</td>
+                            <td>5760</td>
+                            <td>40</td>
+                        </tr>
+						<tr>
+                            <td>4422</td>
+                            <td>6360</td>
+                            <td>60</td>
+                        </tr>
+						<tr>
+                            <td>4422</td>
+                            <td>7080</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			<li> <!-- D-2 -->
+                <a href="月球探索/探索任務/D-2.html">D-2</a> 
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12012</td>
+                            <td>600</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			
+        </ul>
+    </details>
+	
+    <details> <!-- C階任務 -->
+        <summary>C階任務</summary>
+        
+        <ul class="macro-list">
+            <li> <!-- C-1 -->
+                <a href="月球探索/探索任務/C-1.html">C-1</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4092</td>
+                            <td>6000</td>
+                            <td>40</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+            <li> <!-- C-2 -->
+                <a href="月球探索/探索任務/C-2.html">C-2</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4620</td>
+                            <td>7440</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>4620</td>
+                            <td>10680</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>5082</td>
+                            <td>15000</td>
+                            <td>80</td>
+                        </tr>						
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>	
+            <li> <!-- C-3 -->
+                <a href="月球探索/探索任務/C-3.html">C-3</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>924</td>
+                            <td>21240</td>
+                            <td>60</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>			
+            <li> <!-- C-4 -->
+                <a href="月球探索/探索任務/C-4.html">C-4</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12672</td>
+                            <td>600</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+            <li> <!-- C-5 -->
+                <a href="月球探索/探索任務/C-5.html">C-5</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8448</td>
+                            <td>8160</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>			
+		</ul>
+    </details>
+	
+    <details> <!-- B階任務 -->
+        <summary>B階任務</summary>
+        
+        <ul class="macro-list">
+            <li> <!-- B-1 -->
+                <a href="月球探索/探索任務/B-1.html">B-1</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9504</td>
+                            <td>1200</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			<li> <!-- B-2 -->
+                <a href="月球探索/探索任務/B-2.html">B-2</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13926</td>
+                            <td>8400</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			<li> <!-- B-3 -->
+                <a href="月球探索/探索任務/B-3.html">B-3</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2310</td>
+                            <td>8400</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			<li> <!-- B-4 -->
+                <a href="月球探索/探索任務/B-4.html">B-4</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3498</td>
+                            <td>9360</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>3498</td>
+                            <td>9720</td>
+                            <td>60</td>
+                        </tr>						
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>
+			<li> <!-- B-5 -->
+                <a href="月球探索/探索任務/B-5.html">B-5</a>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>作業精度</th>
+                            <th>加工精度</th>
+                            <th>CP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4620</td>
+                            <td>9120</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>726</td>
+                            <td>12960</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>3564</td>
+                            <td>10440</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>4620</td>
+                            <td>16680</td>
+                            <td>80</td>
+                        </tr>						
+                    </tbody>
+                </table>
+                <!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+            </li>			
+		</ul>
+    </details>
+	
+    <details> <!-- A階任務 -->
+        <summary>A階任務</summary>
+        
+        <ul class="macro-list">
+            <details> <!-- A1組 -->
+				<summary>A1組</summary>
+				
+				<ul class="macro-list">
+					<li> <!-- A1-1 -->
+						<a href="月球探索/探索任務/A1-1.html">A1-1</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>23400</td>
+									<td>700</td>
+									<td>80</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-2 -->
+						<a href="月球探索/探索任務/A1-2.html">A1-2</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>8500</td>
+									<td>14000</td>
+									<td>80</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-3 -->
+						<a href="月球探索/探索任務/A1-3.html">A1-3</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9900</td>
+									<td>20300</td>
+									<td>80</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-4 -->
+						<a href="月球探索/探索任務/A1-4.html">A1-4</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>400</td>
+									<td>21000</td>
+									<td>60</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-5 -->
+						<a href="月球探索/探索任務/A1-5.html">A1-5</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7500</td>
+									<td>15000</td>
+									<td>70</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-6 -->
+						<a href="月球探索/探索任務/A1-6.html">A1-6</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>6600</td>
+									<td>12300</td>
+									<td>40</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-7 -->
+						<a href="月球探索/探索任務/A1-7.html">A1-7</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2500</td>
+									<td>11300</td>
+									<td>20</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A1-8 -->
+						<a href="月球探索/探索任務/A1-8.html">A1-8</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>5500</td>
+									<td>14100</td>
+									<td>35</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+				</ul>
+			</details>	
+			<details> <!-- A2組 -->
+				<summary>A2組</summary>
+				
+				<ul class="macro-list">
+					<li> <!-- A2-1 -->
+						<a href="月球探索/探索任務/A2-1.html">A2-1</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7800</td>
+									<td>14900</td>
+									<td>65</td>
+								</tr>
+								<tr>
+									<td>7500</td>
+									<td>15400</td>
+									<td>75</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A2-2 -->
+						<a href="月球探索/探索任務/A2-2.html">A2-2</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10000</td>
+									<td>12000</td>
+									<td>55</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A2-3 -->
+						<a href="月球探索/探索任務/A2-3.html">A2-3</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>19800</td>
+									<td>1100</td>
+									<td>25</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A2-4, 沒巨集-->
+						<!--a href="月球探索/探索任務/A2-4.html">A2-4</a-->
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9100</td>
+									<td>16300</td>
+									<td>35</td>
+								</tr>
+							</tbody>
+						</table>
+						<p style="font-size: 16px; color: black;"> 不是高難度配方，請自行編程巨集 </p>
+					</li>
+					<li> <!-- A2-5 -->
+						<a href="月球探索/探索任務/A2-5.html">A2-5</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1200</td>
+									<td>19000</td>
+									<td>55</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A2-6, 沒巨集 -->
+						<!--a href="月球探索/探索任務/A2-6.html">A2-6</a-->
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9000</td>
+									<td>23000</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td>8700</td>
+									<td>22000</td>
+									<td>70</td>
+								</tr>
+							</tbody>
+						</table>
+						<p style="font-size: 16px; color: #666666;"> 高難度配方，請根據狀態(球色)進行編程 </p>
+					</li>
+					<li> <!-- A2-7 -->
+						<a href="月球探索/探索任務/A2-7.html">A2-7</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7100</td>
+									<td>11800</td>
+									<td>50</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+				</ul>
+			</details>	
+			<details> <!-- A3組 -->
+				<summary>A3組</summary>
+				
+				<ul class="macro-list">
+					<li> <!-- A3-1 -->
+						<a href="月球探索/探索任務/A3-1.html">A3-1</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>4700</td>
+									<td>14900</td>
+									<td>20</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A3-2 -->
+						<a href="月球探索/探索任務/A3-2.html">A3-2</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9600</td>
+									<td>17400</td>
+									<td>80</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A3-3 -->
+						<a href="月球探索/探索任務/A3-3.html">A3-3</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1500</td>
+									<td>23200</td>
+									<td>75</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- p style="font-size: 12px; color: #666666;"> 123 </p-->
+					</li>
+					<li> <!-- A3-4-->
+						<a href="月球探索/探索任務/A3-4.html">A3-4</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>7800</td>
+									<td>12500</td>
+									<td>60</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--p style="font-size: 16px; color: black;"> 不是高難度配方，請自行編程巨集 </p-->
+					</li>
+					<li> <!-- A3-5 -->
+						<a href="月球探索/探索任務/A3-5.html">A3-5</a>
+						<table class="stat-table">
+							<thead>
+								<tr>
+									<th>作業精度</th>
+									<th>加工精度</th>
+									<th>CP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9500</td>
+									<td>24000</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>9300</td>
+									<td>22500</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>10600</td>
+									<td>17100</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>7300</td>
+									<td>18900</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>10000</td>
+									<td>27400</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<td>6500</td>
+									<td>18000</td>
+									<td>35</td>
+								</tr>
+								<tr>
+									<td>9500</td>
+									<td>26800</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>8500</td>
+									<td>19500</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>11400</td>
+									<td>29800</td>
+									<td>70</td>
+								</tr>
+							</tbody>
+						</table>
+						<p style="font-size: 16px; color: #black;"> 高難度配方，請根據狀態(球色)進行發揮，根據情況搭配奇蹟之材 </p>
+					</li>
+				</ul>
+			</details>	
+		</ul>
+    </details>
+
+    <!-- 註解：網頁底部版權說明 -->
+    <hr>
+    <p style="color: #gray; font-size: 14px; font-style: italic; font-weight: bold; text-align: center">
+		網頁內容僅供遊戲交流使用，筆者:鷺青。</p>
 
 </body>
 </html>
