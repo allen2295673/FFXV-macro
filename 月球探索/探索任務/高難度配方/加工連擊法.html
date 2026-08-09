@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>高難 加工連擊法</title>
+    <style>
+		body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        a {
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .code-block {
+            position: relative;
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            max-width: 500px;
+            margin-bottom: 20px; /* 區塊之間的間距 */
+            font-family: Consolas, Monaco, 'Courier New', monospace;
+        }
+
+        .copy-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            color: #57606a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .copy-icon:hover {
+            background-color: #eaeeef;
+            color: #24292f;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #24292f;
+        }
+		/* 摺疊選單樣式 */
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 10px 15px;
+            background-color: #fafafa;
+        }
+		/* 表格樣式 */
+        .stat-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0 15px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .stat-table th, .stat-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+
+        .stat-table th {
+            background-color: #f5f5f5;
+            font-weight: normal;
+            color: #333;
+        }
+
+        ul.macro-list {
+            list-style-type: none;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+
+        ul.macro-list > li {
+            margin-bottom: 20px;
+        }
+		h1 {
+        font-size: 28px;       /* 文字大小 */
+        color: #1a0dab;        /* 文字顏色 */
+        margin-bottom: 15px;   /* 下方間距 */
+        border-bottom: 2px solid #0066cc; /* 標題底線（可自由選用） */
+        padding-bottom: 5px;
+		}
+
+		h2 {
+			font-size: 22px;
+			color: #333333;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 18px;
+			color: #555555;
+			margin-top: 15px;
+			margin-bottom: 8px;
+		}
+		.macro-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-bottom: 20px;
+		}
+
+		.macro-item {
+			flex: 1;
+			min-width: 280px; /* 控制單個卡片最小寬度 */
+			max-width: 500px;
+		}
+		/* 統一設定所有行內小圖示的格式 */
+		.skill {
+			width: 20px;            /* 寬度 */
+			height: 20px;           /* 高度 */
+			vertical-align: middle; /* 與文字垂直居中對齊 */
+			margin: 0 4px;          /* 左右微調間距，避免貼文字太緊 */
+		}
+    </style>
+</head>
+<body>
+
+    <h1>高難度配方 加工連擊法</h1>
+	<div class="note">
+        <strong>⚠️ 使用優劣比較：</strong>
+        <p>1. 此法建議CP越多越好，越多品質越高</p>
+        <p>2. 此法重點關注狀態(球色)，尤其是高品質與效率，需靈活進行搭配</p>
+		<p>3. 在進行製作時，建議食用當版本CP上限增加最多之食物，以提高加工上限</p>
+		<p>4. 此法並非為高難度配方最優解，只是筆者認為之最佳解</p>
+    </div>
+	
+	<hr> <!-- 分隔線 -->
+	
+	<details> <!-- 前情提要 -->
+        <summary>前情提要</summary>
+
+	<p>高難度配方之狀態可參考下表</p>
+		<table class="stat-table">
+			<thead>
+				<tr>
+					<th>通常</th>
+					<td>無任何效果</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>高品質</th>
+					<td>品質上升量為通常狀態之1.5倍</td>
+				</tr>	
+				<tr>
+					<th>效率</th>
+					<td>CP消耗-50%</td>
+				</tr>
+				<tr>
+					<th>好兆頭</th>
+					<td>下個工序必為高品質</td>
+				</tr>
+				<tr>
+					<th>結實</th>
+					<td>耐久度消耗-50%</td>
+				</tr>
+				<tr>
+					<th>堅韌</th>
+					<td>耐久度消耗-50%，且下個工序必為結實</td>
+				</tr>
+				<tr>
+					<th>安定</th>
+					<td>技能成功率+50%</td>
+				</tr>
+				<tr>
+					<th>大進展</th>
+					<td>進展之推動量為通常之1.5倍</td>
+				</tr>
+				<tr>
+					<th>長持續</th>
+					<td>技能效果延長2次作業時間</td>
+				</tr>
+			</tbody>
+		</table>
+	</details>
+    
+	<hr> <!-- 分隔線 -->
+	<h1>第一階段</h1>
+	<h2>目標:將進展推至目標值-1</h2>
+	<p>這一階段旨在不消耗CP的情況下推進進展，使用方法如下:<p>
+	
+	<p>順序為:<img src="picture/能工巧匠技能/製作/堅信.png" alt="" class= "skill">堅信->
+	<img src="picture/能工巧匠技能/製作/崇敬.png" alt="" class= "skill">崇敬->
+	<img src="picture/能工巧匠技能/製作/高速製作.png" alt="" class= "skill">高速製作->高速製作->高速製作，根據進展進度條適時插入最終確認，直至將進度條推至目標值-1
+	
+	<p>備註:如遇到效率之狀態球，可插入掌握，長期儉約，巧奪天工與精修
+	<p>個人偏好順序為掌握->長期儉約，巧奪天工與精修為當耐久只剩一次工序時才會插入
+	<p>插入時機與順序沒有絕對，如果耐久很充足也可跳過效率之狀態球
+	
+	<h1>第二階段</h1>
+	<h2>目標:將內靜推至第10層</h2>
+	<p>這一階段旨在盡可能消耗最少CP的情況下推進內靜，順序如下:</p>
+	
+	<p>首先插入改革，改革是必要項，任何加工類技能都需要有改革的效果</p>
+	
+	<p>其次，根據疊加順序，依次執行加工->中級加工->上級加工</p>
+	<p>請注意:如遇到高品質之狀態球，則中斷連擊，使用集中加工</p>
+	<p>使用集中加工的內靜疊加數為+2，因此如果當下內靜數如果為7層，也可使用加工->精煉加工</p>
+	
+	<p>中間遇到效率球也可依上述方法插入掌握，長期儉約，巧奪天工與精修
+	
+	
+	<h1>第三階段</h1>
+	<h2>目標:盡可能將品質推至上限</h2>
+	<p>這一階段旨在盡可能最大效率的推進品質條，能推多少算多少</p>
+	
+	<p>這一階段搭配為改革->工匠的神技->工匠的神技->工匠的神技，一直重複下去直至剩下56點CP
+	<p>請依現實情況打斷連擊，需留下56點CP收尾
+	<p>如遇到高品質的情況可點選秘訣恢復CP，但其恢復量只有20點，是否使用可依各人情況選擇
+	<p>注意：這一階段不會消耗耐久，因此遇到效率可以忽略不計
+	
+	<p>收尾的部分需要留下56點CP執行闊步->比爾格的祝福->製作收尾，此為必要項，不可中斷	
+	<p><a href="index.html">返回上頁</a></p>
+
+    <hr>
+    <p style="color: #gray; font-size: 14px; font-style: italic; font-weight: bold; text-align: center">
+		網頁內容僅供遊戲交流使用，筆者:鷺青。</p>
+
+
+</body>
+</html>
