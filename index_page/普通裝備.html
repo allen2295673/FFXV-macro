@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>月球探索生產巨集-豪華配方</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        /* 藍色可點擊連結標題 */
+        a.item-title-link {
+            color: #0066cc;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: underline;
+        }
+        a.item-title-link:hover {
+            color: #004499;
+        }
+
+        /* 黑色不可點擊純文字標題 */
+        div.item-title-text {
+            color: #000000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        /* 外層與內層 details 折疊區塊 */
+        details {
+            margin-bottom: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 8px 12px;
+            background-color: #fafafa;
+        }
+        details.sub-details {
+            margin: 10px 0 10px 15px;
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+        }
+
+        summary {
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+            color: #222;
+        }
+        summary:hover {
+            color: #0066cc;
+        }
+
+        /* 數值表格樣式 */
+        .stat-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 8px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        .stat-table th, .stat-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+        .stat-table th {
+            background-color: #f5f5f5;
+            font-weight: normal;
+            color: #333;
+        }
+
+        /* 表格下方註解樣式 */
+        .item-note {
+            color: #000000;
+            font-size: 15px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+        }
+
+        ul.macro-list {
+            list-style-type: none;
+            padding-left: 5px;
+            margin-top: 10px;
+        }
+        ul.macro-list > li {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>月球探索生產巨集</h1>
+
+    <p>此頁面適用版本為7.2版之前，裝備分數最低為 作業精度: 5380/ 加工精度: 4678/ CP: 630</p>
+
+    <div class="note">
+        <strong>⚠️ 使用注意事項：</strong>
+        <p>1. 請根據進展、品質與耐久進行查找</p>
+        <p>2. 建議全程食用犎牛牛排HQ與魔匠藥液HQ進行製作</p>
+    </div>
+    <hr>
+
+    <!-- 容器：動態插入各階級選單 -->
+    <div id="class_recipe"></div>
+
+    <hr>
+    <p><a href="../index.html">返回上頁</a></p>
+    <p style="color: gray; font-size: 14px; font-style: italic; font-weight: bold; text-align: center;">
+        網頁內容僅供遊戲交流使用，筆者:鷺青。
+    </p>
+
+    <script>
+        // 指向配方 JSON 檔與索引頁面所在的相對路徑
+        const targetPath = '../lunar_exploration/exploration_mission/普通裝備配方';
+
+        // 設定要讀取的選單階級與 JSON 檔案路徑
+        const load_class = [
+            {
+                title: 'A階任務',
+                subGroups: [
+                    { classKey: 'A1', fileName: `${targetPath}/A1-class.json`, title: 'A1組' },
+                    { classKey: 'A2', fileName: `${targetPath}/A2-class.json`, title: 'A2組' },
+                    { classKey: 'A3', fileName: `${targetPath}/A3-class.json`, title: 'A3組' }
+                ]
+            },
+            { classKey: 'B', fileName: `${targetPath}/B-class.json`, title: 'B階任務' },
+            { classKey: 'C', fileName: `${targetPath}/C-class.json`, title: 'C階任務' },
+            { classKey: 'D', fileName: `${targetPath}/D-class.json`, title: 'D階任務' }
+        ];
+
+        const class_recipe = document.getElementById('class_recipe');
+
+        // 讀取 JSON 並渲染單組任務列表
+        async function renderRecipeList(container, classKey, fileName) {
+            try {
+                const res = await fetch(`${fileName}?v=${new Date().getTime()}`);
+                if (!res.ok) throw new Error(`無法載入檔案：${fileName}`);
+                const data = await res.json();
+
+                const ul = document.createElement('ul');
+                ul.className = 'macro-list';
+
+                Object.keys(data).forEach(class_id => {
+                    const mission = data[class_id];
+                    const li = document.createElement('li');
+
+                    // 【核心修正點】：正確指向 普通裝備索引.html 並帶入網址參數
+                    const link = `${targetPath}/普通裝備索引.html?class=${classKey}&id=${class_id}`;
+                    const titleName = mission.category || class_id;
+
+                    // 判斷是否無巨集 (hasMacro 設為 false，或無 macro 資料)
+                    const hasNoMacro = (mission.hasMacro === false) || (!mission.macro || mission.macro.length === 0);
+
+                    let titleHtml = '';
+                    if (hasNoMacro) {
+                        // 無巨集：渲染黑色純文字標題 (完全不生成 <a> 連結)
+                        titleHtml = `<div class="item-title-text">${titleName}</div>`;
+                    } else {
+                        // 有巨集：渲染藍色超連結，順利跳轉至 普通裝備索引.html
+                        titleHtml = `<a href="${link}" class="item-title-link">${titleName}</a>`;
+                    }
+
+                    // 表格下方註解
+                    const noteHtml = mission.note 
+                        ? `<div class="item-note">${mission.note}</div>` 
+                        : '';
+
+                    li.innerHTML = `
+                        ${titleHtml}
+                        <table class="stat-table">
+                            <thead>
+                                <tr>
+                                    <th>進展</th>
+                                    <th>品質</th>
+                                    <th>耐久</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${(mission.status || []).map(status => `
+                                    <tr>
+                                        <td>${status.progress}</td>
+                                        <td>${status.quality}</td>
+                                        <td>${status.durability}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                        ${noteHtml}
+                    `;
+                    ul.appendChild(li);
+                });
+
+                container.appendChild(ul);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        // 初始化所有階級選單
+        async function loadAllRecipes() {
+            for (const group of load_class) {
+                const mainDetails = document.createElement('details');
+                const mainSummary = document.createElement('summary');
+                mainSummary.textContent = group.title;
+                mainDetails.appendChild(mainSummary);
+
+                if (group.subGroups && group.subGroups.length > 0) {
+                    for (const subGroup of group.subGroups) {
+                        const subDetails = document.createElement('details');
+                        subDetails.className = 'sub-details';
+
+                        const subSummary = document.createElement('summary');
+                        subSummary.textContent = subGroup.title;
+                        subDetails.appendChild(subSummary);
+
+                        await renderRecipeList(subDetails, subGroup.classKey, subGroup.fileName);
+                        mainDetails.appendChild(subDetails);
+                    }
+                } else {
+                    await renderRecipeList(mainDetails, group.classKey, group.fileName);
+                }
+
+                class_recipe.appendChild(mainDetails);
+            }
+        }
+
+        loadAllRecipes();
+    </script>
+
+</body>
+</html>

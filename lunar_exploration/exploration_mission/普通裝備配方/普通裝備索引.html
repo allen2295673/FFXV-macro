@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title id="page-title">探索任務</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        a {
+            color: #0066cc;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #1a0dab;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #333333;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            color: #444444;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .description-text {
+            font-size: 16px;
+            color: #d9534f;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* 數值表格樣式 */
+        .equipment_level-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0 20px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        .equipment_level-table th, .equipment_level-table td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+        .equipment_level-table th {
+            background-color: #f5f5f5;
+            font-weight: normal;
+            color: #333;
+        }
+
+        /* 巨集區塊平行排列 */
+        .macro-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .macro-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+        }
+
+        /* 程式碼外框與複製按鈕 */
+        .code-block {
+            position: relative;
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: Consolas, Monaco, 'Courier New', monospace;
+        }
+        .copy-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            color: #57606a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .copy-icon:hover {
+            background-color: #eaeeef;
+            color: #24292f;
+        }
+        .copy-tooltip {
+            position: absolute;
+            top: -25px;
+            right: 10px;
+            background: #24292f;
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+            display: none;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #24292f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="class-title">探索任務</h1>
+    <h2 id="category-title">任務代碼</h2>
+    <p id="description-text" class="description-text"></p>
+
+    <!-- 屬性門檻表格 -->
+    <table class="equipment_level-table">
+        <thead>
+            <tr>
+                <th>進展</th>
+                <th>品質</th>
+                <th>耐久</th>
+            </tr>
+        </thead>
+        <tbody id="equipment_level">
+            <!-- 動態插入數值列 -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 巨集程式碼展示區 -->
+    <h2>製作巨集指令</h2>
+    <div class="macro-container" id="macro-container"></div>
+
+    <p><a href="javascript:history.back();">返回上頁</a></p>
+
+    <script>
+        // 1. 解析網址參數 (例如：?class=A1&id=A1-1)
+        const urlParams = new URLSearchParams(window.location.search);
+        let manufactureClass = urlParams.get('class');
+        const itemId = urlParams.get('id');
+
+        // 自動從 id 提取 class 前綴（例如：'A1-1' 自動取得 'A1'）
+        if (!manufactureClass && itemId) {
+            const match = itemId.match(/^([A-Za-z0-9]+)-/);
+            manufactureClass = match ? match[1] : itemId.charAt(0).toUpperCase();
+        }
+
+        // 2. 驗證參數並載入對應 JSON 檔案
+        if (!itemId || !manufactureClass) {
+            document.body.innerHTML = '<h2>網址缺少參數！</h2><p><a href="javascript:history.back();">返回上頁</a></p>';
+        } else {
+            // 同目錄下的 JSON 檔名 (例如：./A1-class.json)
+            const jsonFileName = `./${manufactureClass}-class.json`;
+
+            fetch(`${jsonFileName}?v=${new Date().getTime()}`)
+                .then(response => {
+                    if (!response.ok) throw new Error(`無法載入 JSON 檔案：${jsonFileName}`);
+                    return response.json();
+                })
+                .then(data => {
+                    const mission = data[itemId];
+                    if (!mission) {
+                        document.body.innerHTML = `<h2>找不到項目 [${itemId}] 的配方資料。</h2><p><a href="javascript:history.back();">返回上頁</a></p>`;
+                        return;
+                    }
+
+                    // 填入標題與說明文字
+                    document.title = mission.pageTitle || mission.category || itemId;
+                    document.getElementById('class-title').textContent = mission.class || '探索任務';
+                    document.getElementById('category-title').textContent = mission.category || itemId;
+                    
+                    const descEl = document.getElementById('description-text');
+                    if (mission.description) {
+                        descEl.textContent = mission.description;
+                        descEl.style.display = 'block';
+                    } else {
+                        descEl.style.display = 'none';
+                    }
+
+                    // 填入進展/品質/耐久表格
+                    const tbody = document.getElementById('equipment_level');
+                    tbody.innerHTML = (mission.status || []).map(st => `
+                        <tr>
+                            <td>${st.progress}</td>
+                            <td>${st.quality}</td>
+                            <td>${st.durability}</td>
+                        </tr>
+                    `).join('');
+
+                    // 填入巨集區塊
+                    const macroContainer = document.getElementById('macro-container');
+                    const macros = mission.macro || [];
+
+                    if (macros.length === 0) {
+                        macroContainer.innerHTML = '<p style="color: #666;">此配方暫無巨集指令或為自行編程配方。</p>';
+                    } else {
+                        macroContainer.innerHTML = macros.map((m, index) => {
+                            const macroId = `macro_${index}`;
+                            return `
+                                <div class="macro-item">
+                                    <h3>${m.title}</h3>
+                                    <div class="code-block">
+                                        <span class="copy-tooltip" id="tooltip_${macroId}">已複製！</span>
+                                        <div class="copy-icon" onclick="copyCode('${macroId}')" title="複製巨集指令">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" fill="currentColor">
+                                                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+                                                <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                                            </svg>
+                                        </div>
+                                        <pre><code id="${macroId}"></code></pre>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('');
+
+                        // 寫入純文字巨集以完整保留 \n 換行
+                        macros.forEach((m, index) => {
+                            const codeEl = document.getElementById(`macro_${index}`);
+                            if (codeEl) codeEl.textContent = m.code;
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.body.innerHTML = `
+                        <h2>載入資料失敗</h2>
+                        <p style="color: red;">${err.message}</p>
+                        <p><a href="javascript:history.back();">返回上頁</a></p>
+                    `;
+                });
+        }
+
+        // 一鍵複製巨集功能
+        function copyCode(elementId) {
+            const codeText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const tooltip = document.getElementById(`tooltip_${elementId}`);
+                if (tooltip) {
+                    tooltip.style.display = 'block';
+                    setTimeout(() => {
+                        tooltip.style.display = 'none';
+                    }, 1500);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

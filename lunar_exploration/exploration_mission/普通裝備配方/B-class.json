@@ -1,0 +1,85 @@
+{
+  "B-1": {
+    "class": "B階任務",
+    "category": "B-1",
+    "pageTitle": "探索任務 B-1",
+    "description": "",
+    "status": [
+      { "progress": "9504", "quality": "1200", "durability": "25" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 堅信 <wait.3>\n/ac 掌握 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/e B-1產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "B-2": {
+    "class": "B階任務",
+    "category": "B-2",
+    "pageTitle": "探索任務 B-2",
+    "description": "",
+    "status": [
+      { "progress": "13926", "quality": "8400", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 堅信 <wait.3>\n/ac 闊步 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 長期儉約 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>"
+      }
+    ]
+  },
+  "B-3": {
+    "class": "B階任務",
+    "category": "B-3",
+    "pageTitle": "探索任務 B-3",
+    "description": "",
+    "status": [
+      { "progress": "2310", "quality": "8400", "durability": "20" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 長期儉約 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 精密製作 <wait.3>\n/e B-3產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "B-4": {
+    "class": "B階任務",
+    "category": "B-4",
+    "pageTitle": "探索任務 B-4",
+    "description": "",
+    "status": [
+      { "progress": "3498", "quality": "9360", "durability": "45" },
+      { "progress": "3498", "quality": "9720", "durability": "60" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/e B-4產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "B-5": {
+    "class": "B階任務",
+    "category": "B-5",
+    "pageTitle": "探索任務 B-5",
+    "description": "",
+    "status": [
+      { "progress": "4620", "quality": "9120", "durability": "80" },
+      { "progress": "726", "quality": "12960", "durability": "80" },
+      { "progress": "3564", "quality": "10440", "durability": "70" },
+      { "progress": "4620", "quality": "16680", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閒靜 <wait.3>\n/ac 儉約加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 儉約 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 中級加工 <wait.3>\n/e B-5 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e B-5 第二階段製作完成！ <se.1>"
+      }
+    ]
+  }
+}

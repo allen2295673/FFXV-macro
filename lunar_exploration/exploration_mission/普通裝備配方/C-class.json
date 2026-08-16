@@ -1,0 +1,80 @@
+{
+  "C-1": {
+    "class": "C階任務",
+    "category": "C-1",
+    "pageTitle": "探索任務 C-1",
+    "description": "",
+    "status": [
+      { "progress": "4092", "quality": "6000", "durability": "40" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 掌握 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 比爾格的祝福 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e C-1產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "C-2": {
+    "class": "C階任務",
+    "category": "C-2",
+    "pageTitle": "探索任務 C-2",
+    "description": "",
+    "status": [
+      { "progress": "4620", "quality": "7440", "durability": "80" },
+      { "progress": "4620", "quality": "10680", "durability": "80" },
+      { "progress": "5082", "quality": "15000", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 掌握 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 比爾格的祝福 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e C-2產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "C-3": {
+    "class": "C階任務",
+    "category": "C-3",
+    "pageTitle": "探索任務 C-3",
+    "description": "",
+    "status": [
+      { "progress": "924", "quality": "21240", "durability": "60" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 長期儉約 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 坯料製作 <wait.3>\n/e C-3產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "C-4": {
+    "class": "C階任務",
+    "category": "C-4",
+    "pageTitle": "探索任務 C-4",
+    "description": "",
+    "status": [
+      { "progress": "12672", "quality": "600", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 堅信 <wait.3>\n/ac 闊步 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e C-4產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "C-5": {
+    "class": "C階任務",
+    "category": "C-5",
+    "pageTitle": "探索任務 C-5",
+    "description": "",
+    "status": [
+      { "progress": "8448", "quality": "8160", "durability": "25" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 堅信 <wait.3>\n/ac 掌握 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 闊步 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e C-5產品製作完成！ <se.1>"
+      }
+    ]
+  }
+  
+}

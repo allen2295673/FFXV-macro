@@ -1,0 +1,34 @@
+{
+  "D-1": {
+    "class": "D階任務",
+    "category": "D-1",
+    "pageTitle": "探索任務 D-1",
+    "description": "",
+    "status": [
+      { "progress": "4026", "quality": "5760", "durability": "40" },
+      { "progress": "4422", "quality": "6360", "durability": "60" },
+      { "progress": "4422", "quality": "7080", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 比爾格的祝福 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 精修 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e D-1產品製作完成！ <se.1>"
+      }
+    ]
+  },
+  "D-2": {
+    "class": "D階任務",
+    "category": "D-2",
+    "pageTitle": "探索任務 D-2",
+    "description": "",
+    "status": [
+      { "progress": "12012", "quality": "600", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "巨集區域",
+        "code": "/ac 閒靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e D-2產品製作完成！ <se.1>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "A1-1": {
+    "class": "A階任務",
+    "category": "A1-1",
+    "pageTitle": "探索任務 A1-1",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ",
+    "status": [
+      { "progress": "23400", "quality": "700", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 堅信 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 長期儉約 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 闊步 <wait.2>\n/e A1-1 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 上級加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e A1-1 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-2": {
+    "class": "A階任務",
+    "category": "A1-2",
+    "pageTitle": "探索任務 A1-2",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ",
+    "status": [
+      { "progress": "8500", "quality": "14000", "durability": "80" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 堅信 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 儉約製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 模範製作 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 闊步 <wait.2>\n/e A1-2 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 儉約加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 工匠的神技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 製作 <wait.3>\n/e A1-2 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-3": {
+    "class": "A階任務",
+    "category": "A1-3",
+    "pageTitle": "探索任務 A1-3",
+    "hasMacro": false,
+    "note": "不是高難度配方，請自行編程巨集",
+    "status": [
+      { "progress": "9900", "quality": "20300", "durability": "80" }
+    ]
+  },
+  "A1-4": {
+    "class": "A階任務",
+    "category": "A1-4",
+    "pageTitle": "探索任務 A1-4",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ",
+    "status": [
+      { "progress": "400", "quality": "21000", "durability": "60" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閑靜 <wait.3>\n/ac 儉約加工 <wait.3>\n/ac 儉約 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 坯料加工 <wait.3>\n/ac 加工 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/e A1-4 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 坯料加工 <wait.3>\n/ac 儉約加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 精密製作 <wait.3>\n/e A1-4 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-5": {
+    "class": "A階任務",
+    "category": "A1-5",
+    "pageTitle": "探索任務 A1-5",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ & 魔匠藥液HQ",
+    "status": [
+      { "progress": "7500", "quality": "15000", "durability": "70" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閑靜 <wait.3>\n/ac 改革 <wait.2>\n/ac 儉約加工 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 改革 <wait.2>\n/ac 加工 <wait.3>\n/ac 中級加工 <wait.3>\n/ac 上級加工 <wait.3>\n/ac 巧奪天工 <wait.3>\n/ac 改革 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 加工 <wait.3>\n/ac 中級加工 <wait.3>\n/e A1-5 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 上級加工 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 工匠的神技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 模範製作 <wait.3>\n/e A1-5 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-6": {
+    "class": "A階任務",
+    "category": "A1-6",
+    "pageTitle": "探索任務 A1-6",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ",
+    "status": [
+      { "progress": "6600", "quality": "12300", "durability": "40" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閑靜 <wait.3>\n/ac 儉約加工 <wait.3>\n/ac 掌握 <wait.2>\n/ac 加工 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 加工 <wait.3>\n/ac 中級加工 <wait.3>\n/ac 上級加工 <wait.3>\n/ac 掌握 <wait.2>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/e A1-6 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 長期儉約 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 崇敬 <wait.2>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/ac 坯料製作 <wait.3>\n/e A1-6 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-7": {
+    "class": "A階任務",
+    "category": "A1-7",
+    "pageTitle": "探索任務 A1-7",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ",
+    "status": [
+      { "progress": "2500", "quality": "11300", "durability": "20" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閑靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 長期儉約 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/e A1-7 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 精密製作 <wait.3>\n/e A1-7 第二階段製作完成！ <se.1>"
+      }
+    ]
+  },
+  "A1-8": {
+    "class": "A階任務",
+    "category": "A1-8",
+    "pageTitle": "探索任務 A1-8",
+    "hasMacro": true,
+    "description": "請食用犛牛牛排HQ & 魔匠藥液HQ",
+    "status": [
+      { "progress": "5000", "quality": "14100", "durability": "35" }
+    ],
+    "macro": [
+      {
+        "title": "第一階段",
+        "code": "/ac 閑靜 <wait.3>\n/ac 掌握 <wait.2>\n/ac 改革 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 儉約製作 <wait.3>\n/ac 改革 <wait.2>\n/ac 儉約加工 <wait.3>\n/ac 掌握 <wait.2>\n/ac 崇敬 <wait.2>\n/ac 精密製作 <wait.3>\n/ac 改革 <wait.2>\n/e A1-8 第一階段製作完成！ <se.1>"
+      },
+      {
+        "title": "第二階段",
+        "code": "/ac 精密製作 <wait.3>\n/ac 精密製作 <wait.3>\n/ac 闊步 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 工匠的絕技 <wait.3>\n/ac 闊步 <wait.2>\n/ac 改革 <wait.2>\n/ac 坯料加工 <wait.3>\n/ac 闊步 <wait.2>\n/ac 比爾格的祝福 <wait.3>\n/ac 模範製作 <wait.3>\n/e A1-8 第二階段製作完成！ <se.1>"
+      }
+    ]
+  }
+}
